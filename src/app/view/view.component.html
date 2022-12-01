@@ -1,0 +1,54 @@
+<section class="row users">
+    <div class="up">
+      <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">CCPL</a>
+              <h5>Employee Details</h5>
+            </div> 
+            <form class="navbar-form navbar-right" action="/action_page.php">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </nav>
+      </div>  
+      <div class="main">
+          <div class="table-wrapper">
+          <table>
+              <thead>    
+                <tr>
+                  <th> Employee ID</th>
+                  <th>Name</th>
+                  <th>Joining Date</th>
+                  <th>Gender</th>
+                  <th>Employee Status</th>
+                  <th>Technology</th>
+                  <th>Contact Number</th>
+                  <th>Emergency Number</th>
+                  <th>Mail Id</th>
+                  <th>Update</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let employee of employees">
+                  <td>{{employee.employeeId}}</td>
+                  <td>{{employee.firstName}} {{employee.lastName}}</td>
+                  <td>{{employee.joiningDate}}</td>
+                  <td>{{employee.gender}}</td>
+                  <td>{{employee.employeeStatus}}</td>
+                  <td>{{employee.designation}}</td>
+                  <td>{{employee.mobileNumber}}</td>
+                  <td>{{employee.emergencyNumber}}</td>
+                  <td>{{employee.email}}</td>
+                  <td>
+                    <button type="button" class="btn btn-primary" (click)="updateEmployee(employee.id)">Update</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <button  type="button" class="btn-round" (click)="backClicked()"><i class="fas fa-arrow-left"><span>&nbsp; Back</span></i></button>
+  </section>

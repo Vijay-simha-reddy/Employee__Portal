@@ -1,0 +1,150 @@
+<div class="total_page">
+    <section class="form">
+        <div class="heading">
+            <h2 class="font-effect-emboss">On Boarding Employee</h2>
+        </div>
+        <div class="form_register">
+            <form [formGroup]="register" (ngSubmit)="onSubmit()">
+                <div class="row form_data ">
+                    <div class="col-sm-12 col-first">
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="firstName">First Name<span>*</span></label>
+                            <input type="text" class="form-control" id="fistName" formControlName="firstName" name="firstName" [(ngModel)]="employee.firstName" />
+                            <div *ngIf="register.controls['firstName'].touched && (register.controls['firstName'].hasError('required') ||register.controls['firstName'].invalid)" class="text-danger">
+                                First Name Should be contain atleast 3 letters!
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="lastName">Last Name<span>*</span></label>
+                            <input type="text" class="form-control" id="lastName" formControlName="lastName" name="lastName" [(ngModel)]="employee.lastName" />
+                            <div *ngIf="register.controls['lastName'].touched && (register.controls['lastName'].hasError('required') ||register.controls['lastName'].invalid)" class="text-danger">
+                                Last Name Should be contain atleast 3 letters!
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="email">Email<span>*</span></label>
+                            <input type="email" class="form-control" id="email" formControlName="email" name="email" [(ngModel)]="employee.email" />
+                            <div *ngIf="register.controls['email'].touched && (register.controls['email'].hasError('required') ||register.controls['email'].invalid)" class="text-danger">
+                                Please provide valid Email!
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-12 col-second">
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="address">Address<span>*</span></label>
+                            <input type="text" class="form-control" id="address" formControlName="address" name="address" [(ngModel)]="employee.address" />
+                            <div *ngIf="register.controls['address'].touched && (register.controls['address'].hasError('required') ||register.controls['address'].invalid)" class="text-danger">
+                                Address Should be contain atleast 5 letters!
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="gender">Gender<span>*</span></label>
+                            <select class="form-control" name="gender" id="gender" formControlName="gender" aria-label="gender" [(ngModel)]="employee.gender">
+                                <option selected>--Select--</option>
+                                <option  *ngFor="let g of gender" [value]="g">{{g}}</option>
+                            </select>
+                            <div *ngIf="register.controls['gender'].touched && (register.controls['gender'].hasError('required') ||register.controls['gender'].invalid)" class="text-danger">
+                                Please select any one of the above!
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="emergencynumber">Emergency Number<span>*</span></label>
+                            <input type="tel" class="form-control" id="emergencyNumber" formControlName="emergencyNumber" name="emergencyNumber" pattern="[0-9]*" maxlength="10" [(ngModel)]="employee.emergencyNumber" />
+                            <div *ngIf="register.controls['emergencyNumber'].touched && (register.controls['emergencyNumber'].hasError('required') ||register.controls['emergencyNumber'].invalid)" class="text-danger">
+                                    Number should be 10 digits!
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-12 col-third">
+                       
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="id">ID<span>*</span></label>
+                            <input type="text" class="form-control" id="employeeid" formControlName="employeeId" name="employeeId" [(ngModel)]="employee.employeeId" />
+                            <div *ngIf="register.controls['employeeId'].touched && (register.controls['employeeId'].hasError('required') ||register.controls['employeeId'].invalid)" class="text-danger">
+                                 Please provide valid ID pattern(CC000)!
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="mobilenumber">Mobile Number<span>*</span></label>
+                            <input type="tel" class="form-control" id="mobileNumber" formControlName="mobileNumber" name="mobileNumber" maxlength="10" minlength="10" [(ngModel)]="employee.mobileNumber" />
+                            <div *ngIf="register.controls['lastName'].touched && (register.controls['lastName'].hasError('required') ||register.controls['lastName'].invalid)" class="text-danger">
+                                Mobile Number must have 10 digits!
+                            </div>
+                        </div>
+                    
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="joiningDate">Joining Date<span>*</span></label>
+                            <input type="date" class="form-control" id="joiningDate" formControlName="joiningDate" name="joiningDate" [(ngModel)]="employee.joiningDate" />
+                            <div *ngIf="register.controls['joiningDate'].touched && (register.controls['joiningDate'].hasError('required') ||register.controls['joiningDate'].invalid)" class="text-danger">
+                                  Please provide Date!
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-12 col-fourth ">
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="designation">Designation<span>*</span></label>
+                            <input type="text" class="form-control" id="designation" formControlName="designation" name="designation" [(ngModel)]="employee.designation"/>
+                            <div *ngIf="register.controls['designation'].touched && (register.controls['designation'].hasError('required') ||register.controls['designation'].invalid)" class="text-danger">
+                                Designation Should be contain atleast 3 letters!
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="password">Password<span>*</span></label>
+                            <input type="password" class="form-control" id="password" formControlName="password" name="password"  [(ngModel)]="employee.password" />
+                            <div *ngIf="register.controls['password'].touched && (register.controls['password'].hasError('required') ||register.controls['password'].invalid)" class="text-danger">
+                                Password Should be atleast 5!
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="type">Type<span>*</span></label>
+                            <select class="form-control" name="type" id="type" formControlName="type" [(ngModel)]="employee.type">
+                                <option selected>--Select--</option>
+                                <option  *ngFor="let t of type" [value]="t">{{t}}</option>
+                            </select>
+                            <div *ngIf="register.controls['type'].touched && (register.controls['type'].hasError('required') ||register.controls['type'].invalid)" class="text-danger">
+                                Please select any one of the above!
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-12 col-fifth ">
+
+                        <div class="col-sm-4 form-group">
+                            <label class="form-label" for="status">Status<span>*</span></label>
+                            <select class="form-control" name="employeeStatus" id="employeeStatus" formControlName="employeeStatus" [(ngModel)]="employee.employeeStatus">
+                                <option selected>--Select--</option>
+                                <option  *ngFor="let s of employeeStatus" [value]="s">{{s}}</option>
+                                </select>
+                            <div *ngIf="register.controls['employeeStatus'].touched && (register.controls['employeeStatus'].hasError('required') ||register.controls['employeeStatus'].invalid)" class="text-danger">
+                                Please select any one of the above!
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 form-group">
+
+                        </div>
+
+                        <div class="col-sm-4 form-group">
+                            <br><br>
+                            <button type="submit" [disabled]="!register.valid" class="btn">Submit</button> 
+                        </div>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </section>
+</div>

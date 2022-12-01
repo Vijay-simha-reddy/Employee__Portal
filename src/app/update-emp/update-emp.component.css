@@ -1,0 +1,55 @@
+.total_page{
+    background: #e5E7EB;
+    position:relative;
+    display:flex;
+    background:#008fff;
+    position:relative;
+}
+h2{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color:white;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.col-first , .col-second, .col-third , .col-fourth, .col-fifth{
+    display: flex;
+    margin-left: 40px;
+}
+.form_data{
+    background: white;
+    border-radius: 24px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-right: 18px;
+    margin-left: 18px;
+}
+input{
+    max-width: 80%;
+    font-family:Arial, sans-serif;
+    font-size:18px;
+    line-height: 1;
+}
+label{
+   font-family:Arial, sans-serif;
+   font-size:18px; 
+   padding-bottom: 5px;
+   padding-top: 18px;
+}
+.btn{
+    background: #008fff;
+    border-radius: 24px;
+    font-size: 18px;
+    width:40%;
+    color:white;
+    float:right;
+    margin-right: 80px;
+}
+select{
+    max-width: 80%;
+}
+span{
+    color:red;
+}
+

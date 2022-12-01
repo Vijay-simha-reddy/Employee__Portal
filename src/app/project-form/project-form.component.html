@@ -1,0 +1,60 @@
+<div class="total_page">
+    <section class="form">
+        <div class="col-md-4 img-box">
+            <img src="../assets/images/staff.png">
+        </div>
+        <div class=" col-md-8 form_register">
+            <h3>Project Details</h3>
+                <form (ngSubmit)="onSubmit()" class="col-md-12">
+                    <div class="col">
+                        <div class="row left col-md-6">
+                            <div class="form-groups">
+                                <label>Client Name :</label>
+                                <input type="text" name="clientName"  style="width:100% ;" placeholder="Enter Client Name" [(ngModel)]="employee.clientName" />
+                            </div>
+                            <div class="form-groups">
+                                <label>Project Name :</label>
+                                <input type="text" name="projectName"  style="width:100% ;" placeholder="Enter Project Name" [(ngModel)]="employee.projectName" />
+                            </div>
+                            <div class="form-groups">
+                                <label>Project Starting Date :</label>
+                                <input type="date" name="projectStartingDate"  style="width:100% ;" placeholder="project starting date" [(ngModel)]="employee.projectStartingDate" />
+                            </div>
+                            <div class="form-groups">
+                                <label>Statement Of Work :</label>
+                                <input type="date" name="statementOfWork"  style="width:100% ;" placeholder="Enter Status Of Work" [(ngModel)]="employee.statementOfWork" /> 
+                            </div>
+                            
+                            <div class="form-groups">
+                                <label>Employee Id</label>
+                                <input type="text" name="employeeId"  style="width:100% ;"  placeholder="EmployeeId" [(ngModel)]="employee.employeeId" />
+                            </div>
+                        </div>
+                        <div class="row right col-md-6">
+                            <div class="form-groups">
+                                <label>Client Status :</label>
+                                <input type="text" name="clientStatus" style="width:100% ;"  placeholder="Client Status" [(ngModel)]="employee.clientStatus" />
+                            </div>
+                            <div class="form-groups">
+                                <label>Project Status :</label>
+                                <input type="text" name="projectStatus" style="width:100% ;"  placeholder="Project Status" [(ngModel)]="employee.projectStatus"  />
+                            </div>
+                            <div class="form-groups">
+                                <label>Project Ending Date :</label>
+                                <input type="date" name="projectEndingDate"  style="width:100% ;" placeholder="project ending date" [(ngModel)]="employee.projectEndingDate" />
+                            </div>
+                            <div class="form-groups">
+                                <label>Billing Type :</label>
+                                <input type="text" name="billingType"  style="width:100% ;" placeholder="Enter Billing Type" [(ngModel)]="employee.billingType" />
+                            </div>
+                            <div class="form-groups">
+                                <label>Comments :</label>
+                                <input type="text" name="comments"  style="width:100% ;"  placeholder="Add Comments" [(ngModel)]="employee.comments" />
+                            </div>
+                        </div>    
+                    </div>
+                    <button type="button" class="btn" routerLink="/dashboard">Submit</button>
+                </form>
+        </div>
+    </section>
+</div>

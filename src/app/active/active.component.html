@@ -1,0 +1,77 @@
+<section class="row users">
+    <div class="up">
+      <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">CCPL</a>
+              <h5>Billable Employees</h5>
+            </div> 
+            <form class="navbar-form navbar-right" action="/action_page.php">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+      
+    <div class="main">
+        <div class="table-wrapper">
+        <table>
+            <thead>    
+              <tr>
+                 <th>Employee ID</th>
+                 <th>Name</th>
+                 <th>Client</th>
+                 <th>Project</th>
+                 <th>Project Starting Date</th>
+                 <th>Project Ending Date</th>
+                 <th>Location</th>
+                 <th>Technology</th>
+                 <th>Experience</th>
+                 <th>Mail</th>
+                 <th>Mobile Number</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td *ngIf="employee.employeeStatus=='BILLING' && employee.type!='ADMIN'">
+                        {{employee.employeeId}}
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BILLING' && employee.type!='ADMIN'">
+                        {{employee.firstName}} {{employee.lastName}}
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BILLING' && employee.type!='ADMIN'">
+
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BILLING' && employee.type!='ADMIN'">
+
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BILLING' && employee.type!='ADMIN'">
+
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BILLING' && employee.type!='ADMIN'">
+
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BILLING' && employee.type!='ADMIN'">
+
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BILLING' && employee.type!='ADMIN'">
+
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BILLING'&& employee.type!='ADMIN'">
+
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BILLING' && employee.type!='ADMIN'">
+                        {{employee.email}}
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BILLING' && employee.type!='ADMIN'">
+                        {{employee.mobileNumber}}
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <button  type="button" class="btn-round" (click)="backClicked()"><i class="fas fa-arrow-left"><span>&nbsp; Back</span></i></button>
+</section>

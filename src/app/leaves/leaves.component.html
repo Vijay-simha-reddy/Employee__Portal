@@ -1,0 +1,45 @@
+<body>
+    <div class="heading">
+    <h2>Confrontiers Conclave Private Limited</h2>
+    <h4>Employee Leaves</h4>
+    </div>
+    <table class="table">
+       <thead class="head">
+         <tr>
+           <th>type</th>
+           <th>no of leaves</th>
+           <th>reason</th>
+           <th>---</th>
+         </tr>
+       </thead>
+       <tbody class="data">
+         <tr>
+           <td>
+            <div class="form-group">
+                <select class="form-control Gender" style="font-size:18px;" >
+                    <option class="hidden"  selected disabled>type of leave</option>
+                    <option value="Female">sick</option>
+                    <option value="Male">Casual</option>
+                    <option value="Other">Mensel</option>
+                </select>
+            </div>
+           </td>
+           <td>
+            <div>
+              <input type="text" name="noofleaves" placeholder="no of leaves" [(ngModel)]="noofleaves"> 
+            </div>
+           </td>
+           <td>
+            <div>
+                <input type="text" name="reason" placeholder="reason" [(ngModel)]="reason" > 
+            </div>
+           </td>
+           <td>
+            <div>
+                <button type="button" class="btn" (click)="leaves()">Submit</button> 
+            </div>
+           </td>
+         </tr>
+       </tbody>
+    </table>
+    </body>

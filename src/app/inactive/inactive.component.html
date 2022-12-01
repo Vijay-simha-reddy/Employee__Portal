@@ -1,0 +1,61 @@
+<section class="row users">
+    <div class="up">
+      <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">CCPL</a>
+              <h5>Bench Employees</h5>
+            </div> 
+            <form class="navbar-form navbar-right" action="/action_page.php">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    <div class="main">
+        <div class="table-wrapper">
+        <table>
+            <thead>    
+              <tr>
+                 <th>Employee ID</th>
+                 <th>Name</th>
+                 <th>Technology</th>
+                 <th>Experience</th>
+                 <th>Bench Starting Date</th>
+                 <th>Mail</th>
+                 <th>Mobile Number</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td *ngIf="employee.employeeStatus=='BENCH'">
+                        {{employee.employeeId}}
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BENCH'">
+                        {{employee.firstName}} {{employee.lastName}}
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BENCH'">
+                        {{employee.designation}}
+
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BENCH'">
+                        1 yr
+
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BENCH' ">
+                        {{employee.joiningDate}}
+
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BENCH'">
+                        {{employee.email}}
+                    </td>
+                    <td *ngIf="employee.employeeStatus=='BENCH' ">{{employee.mobileNumber}}</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <button  type="button" class="btn-round" (click)="backClicked()"><i class="fas fa-arrow-left"><span>&nbsp; Back</span></i></button>
+</section>

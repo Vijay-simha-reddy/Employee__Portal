@@ -1,0 +1,44 @@
+<div class="main">
+    <div class="quote col-md-3">
+        <h1 class="line">We Born For Solution</h1>
+        <p>World leading reliable research & AI based Data Analytics solutions for Big
+           Data companies and consumer business products.Drive your success without stress.</p>
+    </div>
+    <div class="form-container col-md-9">
+        <h2 class="header">Sign in</h2>
+        <div class="pic" >
+            <img src="../assets/images/company_logo.png" alt="Company_logo">
+        </div>
+    
+        <div class="signin">   
+            <form [formGroup]="loginForm" class="sign-in-form" (ngSubmit)="onSubmit()">        
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Id" required  id="userid" name="userid" formControlName="employeeId" [(ngModel)]="employeeId">
+                <br>
+                 
+                <div *ngIf="loginForm.controls ['employeeId'].touched && (loginForm.controls['employeeId'].hasError('required') || loginForm.controls['employeeId'].invalid)" class="text-danger">
+                    Please Enter Correct EmployeeId !
+                </div>
+
+            </div>
+
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="password" required  id="password" name="password" formControlName="password" [(ngModel)]="password"><br>
+                 
+                <div *ngIf="loginForm.controls['password'].touched&& (loginForm.controls['password'].hasError('required') || loginForm.controls['password'].invalid)" class="text-danger">
+                    Please Enter Correct password !
+                </div>
+            </div><br>
+            <div ng>
+            <button type="submit" class="btn solid" value="login"
+             [disabled]="!loginForm.valid" formControlName="button">login</button> 
+            </div>      
+        </form>
+    </div>
+    </div>
+</div>
+<div class="employee col-md-9">
+    <img src="../assets/images/employees.jpg"  alt="Staff" width="500px" height="300px">
+</div>

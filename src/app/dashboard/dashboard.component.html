@@ -1,0 +1,76 @@
+<div class="dash">
+    <section id="menu">
+        <div class="logo">
+            <img  class="image" src="./assets/images/company_logo.png" alt="">
+            <h2>CCPL</h2>
+        </div>
+        <div class="items">
+            <li><i class="fa fa-table"></i><a href="#">Dashboard</a></li>   
+            <li><i class="fas fa-chart-line"></i><a href="#" routerLink="/attendance">Attendence</a></li>
+            <li><i class="fa fa-file"></i><a href="#" routerLink="/projectform">Projects</a></li>
+            <li><i class="fas fa-user"></i><a href="#" routerLink="/active">Active</a></li>
+            <li><i class="far fa-user-circle"></i><a href="#" routerLink="/inactive">Inactive</a></li>
+            <li><i class="fas fa-sign-out-alt"></i><a href="#" (click)="signOut()" >Sign Out</a></li>
+        </div>
+    
+    </section>
+    
+    <section id="interface " class="col-sm-10">
+        <div class="navigation">
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <i class="fa fa-search"></i>
+            </div>
+    
+            <div class="profile">
+                <button type=button routerLink="/register" ><i class="fas fa-user-plus me-2 fa-3x"></i></button>
+                <button type=button  (click)="admin_profile(employee.id)" ><img class="admin_profile" src="./assets/images/images.png">
+                </button>
+            </div>
+        </div>
+        <h3 class="i-name">
+            Dashboard
+        </h3>
+    
+        <div class="values">
+            <div class="val-box">
+                <i class="fa fa-users"></i>
+                <div>
+                    <h3 class="number">50</h3>
+                    <button type="button" class="another" routerLink="/view">Employees</button>
+                </div>
+            </div>
+    
+            <div class="val-box">
+                <i class="fa fa-user" id="user"></i>
+                <div>
+                    <h3 class="number">35</h3>
+                    <button type="button" class="another" routerLink="/active">Active</button>
+                </div>
+            </div>
+    
+            <div class="val-box">
+                <i class="fa fa-user-o" id="user-o"></i>
+                <div>
+                    <h3 class="number">15</h3>
+                    <button type="button" class="another" routerLink="/inactive">Inactive</button>
+                </div>
+            </div>
+    
+            <div class="val-box">
+                <i class="fa fa-file-text" id="project"></i>
+                <div>
+                    <h3 class="number">3</h3>
+                    <button type="button" class="another">Projects</button>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="dynamicimg">
+            <img src="./assets/images/image4.png" class="next" width="1010px" height="420px">
+        </div>
+        
+    </section>
+    
+    </div>

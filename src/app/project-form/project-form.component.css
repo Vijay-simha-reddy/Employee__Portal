@@ -1,0 +1,71 @@
+.total_page{
+    display:flex;
+    background-image: linear-gradient(-70deg, #008fff -10%, lightblue 100%);
+    position:relative;
+    width: 100%;
+    height:100vh;
+}
+.form{
+    width:100%;
+    display:flex;
+    border-radius: 18px;
+    background:#008fff;
+    margin:40px 40px 30px 40px;
+    overflow: hidden;
+
+}
+.form_register{
+    padding-left:70px;
+    background:white;
+}
+img{
+    width:400px;
+    height: 89vh;
+}
+.img-box{
+    overflow: hidden;
+}
+.col{
+    display: flex;
+}
+h3{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: 600;
+    margin-left: 30%;
+    padding-top:10px
+}
+
+input{
+    max-width: 90%;
+    font-family:Arial, sans-serif;
+    font-size:18px;
+    line-height: 1;
+    padding:4px 4px 4px 8px;
+    border-radius: 18px;
+    border:2px solid gray;
+    color:black;
+}
+input:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+ }
+label{
+   font-family:Arial, sans-serif;
+   font-size:18px; 
+   padding-bottom: 5px;
+   padding-top: 18px;
+   font-weight: 500;
+}
+.btn{
+    background: #008fff;
+    border-radius: 24px;
+    font-size: 18px;
+    width:20%;
+    color:white;
+    margin-left: 35%;
+    margin-top: 20px;
+}
+select{
+    max-width: 80%;
+}
+

@@ -1,0 +1,172 @@
+.body{
+    max-width:100%;
+    display:flex;
+}
+#menu{
+    background-color:#111827;
+    width:200px;
+    height:100%;
+    padding-bottom: 190px;
+}
+
+#menu .logo{
+    display:flex;
+    align-items: center;
+    color:#fff;
+    padding:30px 0 0 30px;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.items{
+    margin-top: 40px;
+}
+
+li{
+    list-style: none;
+    padding: 15px 0;
+    padding-left: 25px;
+    transition: 0.3s ease;
+}
+
+li:hover{
+    background-color: #253047;
+    cursor:pointer;
+}
+
+li:nth-child(1){
+    border-left: 4px solid #fff;
+}
+i{
+    color:rgb(134, 141 ,151);
+    width: 30px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    font-size:14px ;
+}
+li:hover i, li:hover a{
+    color:#f3f4f6;
+}
+a{
+    text-decoration: none;
+    color:rgb(134, 141 ,151);
+    font-weight:300px;
+    margin-left: 10px;
+    transition: 0.3s ease;
+}
+.emp-profile{
+    border-radius: 0.5rem;
+    background-color: #fff;
+    padding-top:2%;
+    padding-bottom: 2%;
+    
+}
+#profile{
+    margin-left: 10%;
+    margin-top:2%;
+}
+.profile-img{
+    margin-left: -20%;
+}
+.profile-img img{
+    width: 50%;
+    height: 50%;
+}
+
+.profile-img .file {
+    margin-left: -5%;
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+    border: none;
+    border-radius:24px;
+    font-size: 15px;
+    background: #cdccccb8;
+    color: #111827;
+}
+.change_img:hover{
+    background-color: rgb(171, 174, 178);
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: rgb(109, 108, 108);
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 100%;
+    padding: 2%;
+    font-weight: 600;
+    color: #465366;
+    cursor: pointer;
+}
+.profile-head .nav-tabs{
+       margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #1f2933;
+    padding-top: 50%;  
+}
+.profile-tab label{
+    font-weight: 600;
+    font-family: 'poppins',sans-serif;
+    padding-left: 20%;
+    margin-left: 20%;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #13529a;
+    text-align: justify;
+    
+    }
+.about{
+  padding-top: 10%;
+  color: rgb(27, 26, 26);
+}
+  .flex-grow-1{
+    padding-top: 18%;
+    padding-left: 10%;
+    border-style:solid white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 250px;
+    height: 290px;
+    background: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 40px;
+    position: absolute;
+    left: 27%;
+    top: 65%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-top:40px;
+}
+.about_box{
+    margin-left:300px;
+    margin-top: -5%;
+}
+label{
+
+}
+input{
+
+}

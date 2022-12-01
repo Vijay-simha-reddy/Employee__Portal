@@ -1,0 +1,135 @@
+<div class="body">
+    <section id="menu">
+      <div class="logo">
+          <img src="../assets/images/company_logo.png" alt="wait">
+          <h2>CCPL</h2>
+      </div>
+      <div class="items">
+          <li><i class="fa fa-user"></i><a href="#">profile</a></li>
+          <li><i class="fa fa-pie-chart"></i><a href="#">Attendence</a></li>
+          <li><i class="fa fa-thermometer" ></i><a href="#" routerLink="/leaves">Leaves</a></li>
+          <li><i class="fa fa-file-text"></i><a href="#">TimeSheet</a></li>
+          <li><i class="fa fa-sign-out"></i><a href="#" (click)="signOut()">Sign Out</a></li>
+      </div>
+    </section>
+    <section id="profile" >
+      <div class="emp-profile">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="profile-img">
+                  <img src="../assets/images/images.png"/>
+                  <div class="file btn btn-lg btn-primary change_img">
+                  Change Photo
+                  <input type="file" name="file"/>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="profile-head">
+                <h5>{{employee.firstName}}</h5>
+                <h6>{{employee.designation}}</h6>
+                <div class="about">
+                  <h4>About</h4>
+                </div>                            
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <div class="flex-grow-1 ms-3 ">
+                <h5 class='fa fa-line-chart'>&nbsp; Task</h5>
+                <div>
+                  <p class="small text-muted mb-1">No.of Tasks</p>
+                  <p class="mb-0">05</p>
+                </div>
+                <div>
+                  <p class="small text-muted mb-1">Completed Task</p>
+                  <p class="mb-0">03</p>
+                </div>
+                <div>
+                  <p class="small text-muted mb-1">Pending Task</p>
+                  <p class="mb-0">02</p>
+                  <div class="file btn  btn-primary">
+                    view
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-10 about_box">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Employee Id</label>
+                        </div>
+                        <div class="col-md-6">
+                          <p>{{employee.employeeId}}</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>FirstName</label>
+                        </div>
+                        <div class="col-md-6">
+                          <p>{{employee.firstName}}</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>LastName</label>
+                        </div>
+                        <div class="col-md-6">
+                          <p>{{employee.lastName}}</p>
+                        </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label>Email</label>
+                          </div>
+                          <div class="col-md-6">
+                            <p>{{employee.email}}</p>
+                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Address</label>
+                        </div>
+                        <div class="col-md-6">
+                          <p>{{employee.address}}</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>MobileNumber</label>
+                        </div>
+                        <div class="col-md-6">
+                          <p>{{employee.mobileNumber}}</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>EmergencyNumber</label>
+                        </div>
+                        <div class="col-md-4">
+                          <p>{{employee.emergencyNumber}}</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Designation</label>
+                        </div>
+                        <div class="col-md-6">
+                          <p>{{employee.designation}}</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label>Gender</label>
+                        </div>
+                        <div class="col-md-6">
+                          <p>{{employee.gender}}</p>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+      </div>
+    </section>
+  </div>
